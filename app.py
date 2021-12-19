@@ -23,6 +23,10 @@ def download(symbol, start, end):
 def info(symbol):
     return yf.Ticker(symbol).info
 
+@app.route("/analysis/<string:symbol>", methods=["GET"])
+def analysis(symbol):
+    return yf.Ticker(symbol).analysis.to_json()
+
 @app.route("/healthcheck", methods=["GET"])
 def healthcheck():
     return "OK"

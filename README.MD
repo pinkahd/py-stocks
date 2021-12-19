@@ -240,6 +240,215 @@ JSON Response:
 }
 ```
 
+### Analysis
+
+The `/analysis/:symbol` endpoint takes a symbol and return symbol current analysis, such as EPS, Growth, Earnings, Revenue.
+
+Example command:
+
+```bash
+curl localhost:8000/analysis/AAPL | jq
+```
+
+JSON Response:
+
+```json
+{
+  "Max Age": {
+    "0Q": 1,
+    "+1Q": 1,
+    "0Y": 1,
+    "+1Y": 1,
+    "+5Y": 1,
+    "-5Y": 1
+  },
+  "End Date": {
+    "0Q": 1640908800000,
+    "+1Q": 1648684800000,
+    "0Y": 1664496000000,
+    "+1Y": 1696032000000,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Growth": {
+    "0Q": 0.118999995,
+    "+1Q": -0.056999996,
+    "0Y": 0.023,
+    "+1Y": 0.077,
+    "+5Y": 0.1568,
+    "-5Y": 0.08415
+  },
+  "Earnings Estimate Avg": {
+    "0Q": 1.88,
+    "+1Q": 1.32,
+    "0Y": 5.74,
+    "+1Y": 6.18,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Earnings Estimate Low": {
+    "0Q": 1.75,
+    "+1Q": 1.16,
+    "0Y": 5.2,
+    "+1Y": 5.26,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Earnings Estimate High": {
+    "0Q": 1.97,
+    "+1Q": 1.52,
+    "0Y": 6.27,
+    "+1Y": 6.82,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Earnings Estimate Year Ago Eps": {
+    "0Q": 1.68,
+    "+1Q": 1.4,
+    "0Y": 5.61,
+    "+1Y": 5.74,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Earnings Estimate Number Of Analysts": {
+    "0Q": 25,
+    "+1Q": 24,
+    "0Y": 37,
+    "+1Y": 33,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Earnings Estimate Growth": {
+    "0Q": 0.118999995,
+    "+1Q": -0.056999996,
+    "0Y": 0.023,
+    "+1Y": 0.077,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Revenue Estimate Avg": {
+    "0Q": 118182000000,
+    "+1Q": 90424300000,
+    "0Y": 381716000000,
+    "+1Y": 401199000000,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Revenue Estimate Low": {
+    "0Q": 111806000000,
+    "+1Q": 83259000000,
+    "0Y": 359156000000,
+    "+1Y": 300500000000,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Revenue Estimate High": {
+    "0Q": 121303000000,
+    "+1Q": 98284000000,
+    "0Y": 405435000000,
+    "+1Y": 445584000000,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Revenue Estimate Number Of Analysts": {
+    "0Q": 22,
+    "+1Q": 22,
+    "0Y": 36,
+    "+1Y": 31,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Revenue Estimate Year Ago Revenue": {
+    "0Q": null,
+    "+1Q": null,
+    "0Y": 365817000000,
+    "+1Y": 381716000000,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Revenue Estimate Growth": {
+    "0Q": null,
+    "+1Q": null,
+    "0Y": 0.043,
+    "+1Y": 0.051,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Eps Trend Current": {
+    "0Q": 1.88,
+    "+1Q": 1.32,
+    "0Y": 5.74,
+    "+1Y": 6.18,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Eps Trend 7Days Ago": {
+    "0Q": 1.88,
+    "+1Q": 1.32,
+    "0Y": 5.74,
+    "+1Y": 6.15,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Eps Trend 30Days Ago": {
+    "0Q": 1.88,
+    "+1Q": 1.32,
+    "0Y": 5.75,
+    "+1Y": 6.15,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Eps Trend 60Days Ago": {
+    "0Q": 1.87,
+    "+1Q": 1.29,
+    "0Y": 5.68,
+    "+1Y": 5.97,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Eps Trend 90Days Ago": {
+    "0Q": 1.87,
+    "+1Q": 1.28,
+    "0Y": 5.72,
+    "+1Y": 5.95,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Eps Revisions Up Last7Days": {
+    "0Q": 2,
+    "+1Q": 1,
+    "0Y": 2,
+    "+1Y": 2,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Eps Revisions Up Last30Days": {
+    "0Q": 3,
+    "+1Q": 1,
+    "0Y": 4,
+    "+1Y": 4,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Eps Revisions Down Last30Days": {
+    "0Q": 0,
+    "+1Q": 0,
+    "0Y": 0,
+    "+1Y": 0,
+    "+5Y": null,
+    "-5Y": null
+  },
+  "Eps Revisions Down Last90Days": {
+    "0Q": null,
+    "+1Q": null,
+    "0Y": null,
+    "+1Y": null,
+    "+5Y": null,
+    "-5Y": null
+  }
+}
+```
+
 ## Credits
 
 This software uses the following open source packages:
