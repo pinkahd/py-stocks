@@ -31,6 +31,10 @@ def analysis(symbol):
 def news(symbol):
     return jsonify(yf.Ticker(symbol).news)
 
+@app.route("/stats/<string:symbol>", methods=["GET"])
+def stats(symbol):
+    return yf.Ticker(symbol).stats()
+
 @app.route("/healthcheck", methods=["GET"])
 def healthcheck():
     return "OK"
