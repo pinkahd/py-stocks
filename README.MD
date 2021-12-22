@@ -449,6 +449,87 @@ JSON Response:
 }
 ```
 
+### News
+
+The `/news/:symbol` endpoint takes a symbol and return current news about the company.
+
+Example command:
+
+```bash
+curl localhost:8000/news/AAPL | jq
+```
+
+JSON Response:
+
+```json
+[
+  {
+    "link": "https://finance.yahoo.com/m/fdb436b3-556d-34e4-8dfe-4d7741d92f12/5-reasons-apple-stock-can.html",
+    "providerPublishTime": 1640199300,
+    "publisher": "Barrons.com",
+    "title": "5 Reasons Apple Stock Can Trade Higher From Here",
+    "type": "STORY",
+    "uuid": "fdb436b3-556d-34e4-8dfe-4d7741d92f12"
+  },
+  {
+    "link": "https://finance.yahoo.com/news/airline-executives-plead-governments-ease-180000940.html",
+    "providerPublishTime": 1640196000,
+    "publisher": "Oilprice.com",
+    "title": "Airline Executives Plead With Governments To Ease Restrictions",
+    "type": "STORY",
+    "uuid": "93053731-8504-3351-a42c-75b0533994b4"
+  },
+  {
+    "link": "https://finance.yahoo.com/news/10-value-stocks-buy-according-173231489.html",
+    "providerPublishTime": 1640194351,
+    "publisher": "Insider Monkey",
+    "title": "10 Value Stocks to Buy According to Billionaire Paul Tudor Jones",
+    "type": "STORY",
+    "uuid": "f41097f9-9fd3-3fc9-be89-d79023773a5d"
+  },
+  {
+    "link": "https://finance.yahoo.com/m/b3389ef7-097c-315b-86f3-fc80a9b0e612/apple-iphone-sales-are.html",
+    "providerPublishTime": 1640192340,
+    "publisher": "Barrons.com",
+    "title": "Apple iPhone Sales Are Stronger Than Expected, Says Morgan Stanley",
+    "type": "STORY",
+    "uuid": "b3389ef7-097c-315b-86f3-fc80a9b0e612"
+  },
+  {
+    "link": "https://finance.yahoo.com/news/facebook-papers-how-the-2021-leak-could-haunt-meta-in-2022-162233905.html",
+    "providerPublishTime": 1640190153,
+    "publisher": "Yahoo Finance",
+    "title": "Facebook Papers: How the 2021 leak could haunt Meta in 2022",
+    "type": "STORY",
+    "uuid": "720a7519-b7a7-45b1-bd8b-c5d0855b3988"
+  },
+  {
+    "link": "https://finance.yahoo.com/video/stock-buybacks-set-record-q3-151908752.html",
+    "providerPublishTime": 1640186348,
+    "publisher": "Yahoo Finance Video",
+    "title": "Stock buybacks set record in Q3, led by Apple, Meta, Google",
+    "type": "VIDEO",
+    "uuid": "f32aef69-9aa3-3670-8969-ea3b1a36f95c"
+  },
+  {
+    "link": "https://finance.yahoo.com/m/65b53896-faf4-3a06-9d0d-a63cf3c83192/5-dow-jones-stocks-to-buy-and.html",
+    "providerPublishTime": 1640186133,
+    "publisher": "Investor's Business Daily",
+    "title": "5 Dow Jones Stocks To Buy And Watch In December 2021: Apple, Microsoft Rise",
+    "type": "STORY",
+    "uuid": "65b53896-faf4-3a06-9d0d-a63cf3c83192"
+  },
+  {
+    "link": "https://finance.yahoo.com/video/market-check-stocks-open-mixed-150312079.html",
+    "providerPublishTime": 1640185392,
+    "publisher": "Yahoo Finance Video",
+    "title": "Market check: Stocks open mixed, bond volatility settles",
+    "type": "VIDEO",
+    "uuid": "5075e367-1d24-3713-a0eb-b78167321564"
+  }
+]
+```
+
 ## Credits
 
 This software uses the following open source packages:

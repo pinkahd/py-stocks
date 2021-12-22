@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import yfinance as yf
 import os
 import signal
@@ -26,6 +26,10 @@ def info(symbol):
 @app.route("/analysis/<string:symbol>", methods=["GET"])
 def analysis(symbol):
     return yf.Ticker(symbol).analysis.to_json()
+
+@app.route("/news/<string:symbol>", methods=["GET"])
+def news(symbol):
+    return jsonify(yf.Ticker(symbol).news)
 
 @app.route("/healthcheck", methods=["GET"])
 def healthcheck():
