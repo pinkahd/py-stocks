@@ -10,6 +10,7 @@
   <a href="#build">Build</a> •
   <a href="#endpoints">Endpoints</a> •
   <a href="#credits">Credits</a> •
+  <a href="#legal">Legal</a> •
   <a href="#license">License</a>
 </p>
 
@@ -994,6 +995,21 @@ This software uses the following open source packages:
 - [yfinance](https://pypi.org/project/yfinance/)
 - [gunicorn](https://gunicorn.org/)
 - [Flask](https://flask.palletsprojects.com)
+
+## Legal
+
+**Yahoo!, Y!Finance, and Yahoo! finance are registered trademarks of
+Yahoo, Inc.**
+
+---
+
+**You should refer to Yahoo!'s terms of use**
+([here](https://policies.yahoo.com/us/en/yahoo/terms/product-atos/apiforydn/index.htm),
+[here](https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html), and
+[here](https://policies.yahoo.com/us/en/yahoo/terms/index.htm)) **for
+details on your rights to use the actual data downloaded. Remember - the
+Yahoo! finance API is intended for personal use only.**
+
 
 ## License
 
